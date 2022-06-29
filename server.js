@@ -44,14 +44,14 @@ app.use('/auth', authRoute);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useUnifiedTopology', true);
 mongoose
-	.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
-	.then(() => {
-		app.listen(port, () => {
-			console.log('connect');
-		});
-	})
-	.catch((err) => {
-		console.log(err);
-	});
+  .connect(process.env.DATABASE_URL, { useNewUrlParser: true })
+  .then(() => {
+    app.listen(port, () => {
+      console.log('connect');
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 module.exports = app;
